@@ -107,7 +107,6 @@
                     var prevData = cropData || scope.cropInit;
                     var cropsList = ['CropLeft', 'CropRight', 'CropTop', 'CropBottom'];
                     if ((!_.isEmpty(prevData) && !prevData.href) && !angular.equals(_.pick(nextData, cropsList), _.pick(prevData, cropsList))) {
-                        console.log(prevData, nextData);
                         angular.extend(scope.cropData, nextData);
                         scope.onChange({renditionName: scope.rendition.name, cropData: nextData});
                     }
