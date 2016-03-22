@@ -106,7 +106,7 @@
                     selectionHeight = nextData.CropBottom - nextData.CropTop;
                     var prevData = cropData || scope.cropInit;
                     var cropsList = ['CropLeft', 'CropRight', 'CropTop', 'CropBottom'];
-                    if ((!_.isEmpty(prevData) && !prevData.href) && !angular.equals(_.pick(nextData, cropsList), _.pick(prevData, cropsList))) {
+                    if (!angular.equals(_.pick(nextData, cropsList), _.pick(prevData, cropsList))) {
                         angular.extend(scope.cropData, nextData);
                         scope.onChange({renditionName: scope.rendition.name, cropData: nextData});
                     }
